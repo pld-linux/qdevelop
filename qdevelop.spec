@@ -1,12 +1,12 @@
 Summary:	IDE dedicated to QT4
 Summary(pl.UTF-8):	IDE zaprojektowane z myślą o QT4
 Name:		qdevelop
-Version:	0.26.1
+Version:	0.27.4
 Release:	1
 License:	GPL v2
 Group:		X11/Development/Tools
 Source0:	http://qdevelop.org/public/release/%{name}-%{version}.tar.gz
-# Source0-md5:	82196807eec3551c2cfc97ececdb333e
+# Source0-md5:	0ea8b3b2ed15bfa275d5c03f40cb871b
 URL:		http://qdevelop.org/
 BuildRequires:	QtCore-devel
 BuildRequires:	QtDesigner-devel
