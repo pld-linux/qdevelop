@@ -18,6 +18,7 @@ BuildRequires:	QtXml-devel
 BuildRequires:	cmake
 BuildRequires:	libstdc++-devel
 BuildRequires:	rpmbuild(macros) >= 1.293
+BuildRequires:	qt4-build >= 4.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
