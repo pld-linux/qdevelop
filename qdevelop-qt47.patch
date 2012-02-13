@@ -1,0 +1,22 @@
+--- qdevelop-0.28/qdevelop-v0.28/src/build.h~	2012-02-13 21:33:55.522808199 +0100
++++ qdevelop-0.28/qdevelop-v0.28/src/build.h	2012-02-13 21:34:05.352877594 +0100
+@@ -56,7 +56,7 @@
+ 	int m_warnings;
+ 	QString m_forceMode;
+ signals:
+-	void message(QString, QString=0);
++	void message(QString, QString=QString::null);
+ protected slots:
+ 	void slotBuildMessages();
+ 	void slotStopBuild();
+--- qdevelop-0.28/qdevelop-v0.28/src/textEdit.h~	2010-04-17 09:24:38.000000000 +0200
++++ qdevelop-0.28/qdevelop-v0.28/src/textEdit.h	2012-02-13 21:36:50.037372780 +0100
+@@ -142,7 +142,7 @@
+     void setMouseHidden( bool hidden );
+ public slots:
+     void gotoLine( int line, bool moveTop );
+-    void slotFind(Ui::FindWidget uiFind, Ui::ReplaceWidget uiReplace, QString ttf=0,  QTextDocument::FindFlags options=0, bool fromButton=false);
++    void slotFind(Ui::FindWidget uiFind, Ui::ReplaceWidget uiReplace, QString ttf=QString::null,  QTextDocument::FindFlags options=0, bool fromButton=false);
+     void slotIndent(bool indent=true);
+     void slotUnindent();
+     void comment(ActionComment action);
