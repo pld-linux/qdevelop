@@ -1,13 +1,14 @@
 Summary:	IDE dedicated to QT4
 Summary(pl.UTF-8):	IDE zaprojektowane z myślą o QT4
 Name:		qdevelop
-Version:	0.27.4
-Release:	4
+Version:	0.28
+Release:	1
 License:	GPL v2
 Group:		X11/Development/Tools
-Source0:	http://qdevelop.org/public/release/%{name}-%{version}.tar.gz
-# Source0-md5:	0ea8b3b2ed15bfa275d5c03f40cb871b
-URL:		http://qdevelop.org/
+Source0:	http://biord-software.org/downloads/%{name}-v%{version}.tar.gz
+# Source0-md5:	24e64bd80dd7407a885acd639b59a740
+Patch0:		%{name}-qt47.patch
+URL:		http://biord-software.org/qdevelop/
 BuildRequires:	QtCore-devel
 BuildRequires:	QtDesigner-devel
 BuildRequires:	QtGui-devel
@@ -39,9 +40,10 @@ ale szybsze, lżejsze i dostępne na wiele platform.
 
 %prep
 %setup -q -c
+%patch0 -p1
 
 %build
-%{__cmake} %{name}-%{version}
+%{__cmake} %{name}-v%{version}
 %{__make}
 
 %install
@@ -54,5 +56,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{name}-%version/{ChangeLog.txt,copying,README*}
+%doc %{name}-v%{version}/{ChangeLog.txt,copying,README*}
 %attr(755,root,root) %{_bindir}/*
