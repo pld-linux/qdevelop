@@ -40,7 +40,7 @@ ale szybsze, lżejsze i dostępne na wiele platform.
 
 %prep
 %setup -q -c
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__cmake} %{name}-v%{version}
